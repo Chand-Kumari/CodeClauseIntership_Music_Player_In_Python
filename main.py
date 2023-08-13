@@ -69,12 +69,12 @@ class musicplayer:
             self.filelabel['text']='Current Music :- ' + os.path.basename(filename)
         
         #Adding background images---
-        self.background =ImageTk.PhotoImage(file='C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\bg_img.png')
+        self.background =ImageTk.PhotoImage(file='bg_img.png')
         background=Label(self.screen, image=self.background, bg='black').place(y=65)
         #self.background.pack(fill=X)
         
         #Adding images---
-        self.photo=ImageTk.PhotoImage(file="C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\5.png") 
+        self.photo=ImageTk.PhotoImage(file="5.png") 
         #self.photo.geometry('250x250')
         photo=Label(self.screen,image=self.photo, bg="white").place(x=20,y=60)
         #self.label1.pack(fill=X)
@@ -127,7 +127,7 @@ class musicplayer:
         
         #Creating buttons for music
         #play_button
-        self.photo_btn_play=ImageTk.PhotoImage(file="C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\playbtn.png")
+        self.photo_btn_play=ImageTk.PhotoImage(file="playbtn.png")
         photo_btn_play=Button(self.screen,image=self.photo_btn_play, bd=1, bg='white', command=playmusic).place(x=20,y=310)
         
         #creating a function for pause_botton---
@@ -140,7 +140,7 @@ class musicplayer:
         
         #Creating buttons for music
         #pause_button----
-        self.photo_btn_pause=ImageTk.PhotoImage(file="C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\pausebtn.png")
+        self.photo_btn_pause=ImageTk.PhotoImage(file="pausebtn.png")
         photo_btn_pause=Button(self.screen,image=self.photo_btn_pause, bg='white', bd='1', command=pausemusic).place(x=90,y=310)
         
         # #creating a function for stop music----
@@ -166,17 +166,17 @@ class musicplayer:
         #sound mute button_function---
         def Mutebtn():
             self.vol_bar.set(0)
-            self.Mutebtn=ImageTk.PhotoImage(file='C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\Mutebtn.PNG')
+            self.Mutebtn=ImageTk.PhotoImage(file='Mutebtn.PNG')
             Mutebtn=Button(self.screen, image=self.Mutebtn, command=Unmutebtn).place(x=350, y=250)
             
         #sound unmute button_function---
         def Unmutebtn():
             self.vol_bar.set(30)
-            self.Unmutebtn=ImageTk.PhotoImage(file='C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\vol.PNG')
+            self.Unmutebtn=ImageTk.PhotoImage(file='vol.PNG')
             Unmutebtn=Button(self.screen, image=self.Unmutebtn, command=Mutebtn).place(x=350, y=250)
             
         #Volume bar img---
-        self.muteV=ImageTk.PhotoImage(file='C:\\Users\\chand\\OneDrive\\Desktop\\python project\\images\\vol.PNG')
+        self.muteV=ImageTk.PhotoImage(file='vol.PNG')
         muteV=Button(self.screen, image=self.muteV, bd=1, command=Mutebtn).place(x=350, y=250)
         
         #function for volume bar---
